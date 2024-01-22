@@ -38,13 +38,14 @@ const App = ()=> {
   return (
 
     <>
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Navbar title="Text Converter App" mode={mode} toggleMode={toggleMode} aboutText="About Us" /  >
       <Alert alert={alert} />        
         <div  className="container my-3">
           <Routes>
             <Route path="/about" element={<About mode={mode} />} / > 
-             <Route path="/" element={<TextForm showAlert={showAlert} heading=" Enter your text and convert to what do you want" mode={mode} />}/>
+            <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter your text and convert to what do you want" mode={mode} />} />
+
          </Routes>
         </div>
         </BrowserRouter>
